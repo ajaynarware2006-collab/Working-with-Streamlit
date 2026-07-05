@@ -13,14 +13,12 @@ dob=st.date_input(label="Date of Birth")
 
 time=st.time_input(label="Preferred Interview Time")
 
-
 st.header("Education")
 college=st.text_input(label="College Name",placeholder="Ex-IPS ACEDEMY INDORE")
 
 branch=st.selectbox(label="Select Branch",options=["AIML","CSE","EEE","Civil","chemical","FT"])
 
 current_semester=st.slider(label="Current Semester",min_value=1,max_value=8)
-
 
 st.header("Technical Skills")
 
