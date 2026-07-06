@@ -1,14 +1,14 @@
 import psycopg as pg
-from password import password
+import streamlit as st
 
 def connecting():
     connection=pg.connect(
                 host="localhost",
                 dbname="Expense_Tracker",
                 user="postgres",
-                password=password(),
+                password=st.secrets["password"],
                 port=5432)
     
-    # cursor=connection.cursor()
+    cursor=connection.cursor()
 
-    return connection
+    return connection , cursor
